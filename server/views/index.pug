@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+	//// Start the head //
+	head
+		include ./_inc/head.pug
+	body
+		// Start the navigation //
+		include ./_inc/nav.pug
+		////home page header//
+		header.intro-header
+			div.container-fluid
+				div.row
+					div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+						div.site-heading
+							h1 Refined Js
+							hr.small
+							span.subheading The Pursuit To Refined Javascript
+		////Start listing of blog entries//
+		div.container-fluid
+			div.row
+				div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+					////**************Start Post**************////
+					div.post-preview
+						////Start the header//
+						a(href="")
+							h2.post-title Angular Validators
+						p.post-meta By 
+								a(href-"") Yakira Bristol 
+								|| April 30th, 2016
+						hr
+						h3.post-subtitle In validating form input fields, I wanted to create a directive that would handle the validation of an email. The most common way to do this would be to look at $valid and $invalid on the field. But what if that is not enough and you want to validate for instance an email against a regex or make a call to the server to validate a value? NgModel was going to be used in the...
+						p.post-meta-details
+							i.fa.fa-tags
+							| 
+							a(href="") AngularJS
+							|, 
+							a(href="") Validation
+							|, 
+							a(href="") Javascript
+						p.post-meta-details
+							i.fa.fa-comments
+							| 
+							a(href="") 0 Comments
+							a.pull-right(href="/post/angular-validators")
+								span read more...
+					////**************End Post************//				
+					ui.pager
+						li.next
+							a(href="") Older Posts &rarr;
+			hr
+		////Start the footer//
+		include ./_inc/footer.pug
+		include ./_inc/scripts.pug

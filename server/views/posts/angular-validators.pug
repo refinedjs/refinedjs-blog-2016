@@ -1,0 +1,27 @@
+header.intro-header.post
+	div.container-fluid
+		div.row
+			div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+				div.site-heading
+					h1 Angular Validators
+div.container-fluid
+	div.row
+		div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+			p In validating form input fields, I wanted to create a directive that would handle the validation of an email. The most common way to do this would be to look at $valid and $invalid on the field. But what if that is not enough and you want to validate for instance an email against a regex or make a call to the server to validate a value? NgModel was going to be used in the directive and that is when I came across $validators on NgModelController. 
+			p This can be accessed in the link function and set for the field you would like to validate.
+			<code data-gist-id="6d91aaefc87a1144ba8fdcaddb116bb8" data-gist-show-spinner="true"></code>
+			p What if you needed to make that call to the server to validate? You would use asyncValidators.
+			<code data-gist-id="8902a38e0650011793cacefae51cf08f" data-gist-show-spinner="true"></code>
+			p One caveat is that every time you type in the input, the call to the server is being made. To alleviate this use ng-model-options to update the behavior of the validation. 			
+			p These can be set on the field:
+			<code data-gist-id="116e1f8f2e653995baeb11c7b6d17242" data-gist-show-spinner="true"></code>
+			p What these options say is update on default, update on blur, set the debounce default to 300 ms and blur. The really important part here is debounce. What debounce says is that we only want the validation to occur if no input has been entered after 300ms or a blur occurs on the input field. This allows the user to keep typing without being interrupted with validation errors and we make fewer calls to the server for validation.
+			p These can also be added in the link function.			
+			<code data-gist-id="ada88fd9e17bd335e1a141b128a05f36" data-gist-show-spinner="true"></code>
+			p It is preferable to set default options in the link function and allow anyone using your directive to set their own options on the input field.			
+			<code data-gist-id="cc6c14aae548dca93d91ad61fcd7f0ca" data-gist-show-spinner="true"></code>
+			p angular.merge performs a deep copy of the object as apposed to angular.extend which performs a shallow copy of the object. We discuss the different functions on angular in 
+				a(href="")
+					Some Cool Post!			
+
+			

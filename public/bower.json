@@ -1,0 +1,25 @@
+{
+  "name": "",
+  "version": "0.0.0",
+  "authors": [
+    "Memberclicks"
+  ],
+  "description": "",
+  "main": "index.html",
+  "keywords": [
+    "node",
+    "javascript",
+    "html"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}

@@ -1,0 +1,15 @@
+doctype html
+html(lang="en")
+	//// Start the head //
+	head
+		include ./_inc/head.pug
+	body
+		//// Start the navigation //
+		include ./_inc/nav.pug
+		//// Start the post //
+		div 
+			!= post_template
+		//// End the post //
+		////Start the footer//
+		include ./_inc/footer.pug
+		include ./_inc/scripts.pug

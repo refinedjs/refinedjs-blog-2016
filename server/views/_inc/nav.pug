@@ -3,7 +3,17 @@
 nav(class=nav_classes)
 	div.container-fluid
 		div.navbar-header.page-scroll
+			button.navbar-toggle(type="button" data-target="#main-nav")&attributes({'data-toggle': 'collapse'})
+				span.sr-only Toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
 			a.navbar-brand( href="/")
-				img.logo(src="/public/assets/images/main-logo.svg")
-		div.collapse.navbar-collapse
+				img(src="/public/assets/images/main-logo.svg")
+		div#main-nav.collapse.navbar-collapse
 			ui.nav.navbar-nav.navbar-right
+				li 
+					a(href="/why") Why
+				li
+					a(href="/contributors") Contributors
+				

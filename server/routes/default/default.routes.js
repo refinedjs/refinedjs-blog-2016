@@ -19,6 +19,12 @@
 		app.route( "/" ).get(function( req, res ){
 			res.render( 'index' );
 		});
+		app.route( "/contributors" ).get(function( req, res ){
+			res.render( 'contributors' );
+		});
+		app.route( "/why" ).get(function( req, res ){
+			res.render( 'why' );
+		});
 		app.route( "/health-check" ).get( function( req, res ){
 			res.send( "OK" );
 		});

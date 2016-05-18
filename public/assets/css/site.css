@@ -91,6 +91,12 @@ img.logo{
   }
 */ 
 }
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	background: #fff;
+	border:none;
+	width: 75%;
+	float: right;
+}
 @media only screen and (min-width: 1170px) {
   .navbar-custom {
     -webkit-transition: background-color 0.3s;
@@ -109,10 +115,8 @@ img.logo{
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
     top: -61px;
-	/*
     background-color: rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid #f2f2f2;
-    */
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
@@ -495,4 +499,21 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #41b7d8;
+}
+
+.thumbnail{
+	border: none;
+}
+.thumbnail > img{
+	border-radius: 15px;
+}
+.thumbnail p{
+	font-size: 18px;
+	margin: 20px 0;
+}
+.thumbnail a, .thumbnail a:hover{
+	text-decoration: none;
+}
+.thumbnail p.context{
+	max-height: 200px;
 }

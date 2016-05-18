@@ -1,0 +1,60 @@
+doctype html
+html(lang="en")
+	//// Start the head //
+	head
+		include ./_inc/head.pug
+	body
+		//// Start the navigation //
+		include ./_inc/nav.pug
+		header.intro-header
+			div.container-fluid
+				div.row
+					div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+						div.site-heading
+							h1 Our Contributors
+							hr.small
+							span.subheading Meet Our Team
+
+		article
+			div#contributors.container
+				div.row
+					div.col-sm-6.col-md-6
+						div.thumbnail
+							img(src="/public/assets/images/josh-gonzalez.jpg")
+							div.caption
+								p.context Nerd by day, superhero by night. I have been working with UI and web applications since 2000, I pretend to know everything; however, I secretly am always searching for the answer. I truly can say: "I.Love.Javascript". Enough Said.
+								p
+									a(href="https://twitter.com/refinedjs")
+										span.fa-stack.fa-lg
+											i.fa.fa-circle.fa-stack-2x
+											i.fa.fa-twitter.fa-stack-1x.fa-inverse
+									a(href="https://www.instagram.com/jtmg.io/")
+										span.fa-stack.fa-lg
+											i.fa.fa-circle.fa-stack-2x
+											i.fa.fa-instagram.fa-stack-1x.fa-inverse
+									a(href="https://github.com/refinedjs")
+										span.fa-stack.fa-lg
+											i.fa.fa-circle.fa-stack-2x
+											i.fa.fa-github.fa-stack-1x.fa-inverse
+					div.col-sm-6.col-md-6
+						div.thumbnail
+							img(src="/public/assets/images/yakira-bristol.jpg")
+							div.caption
+								p.context Creator, builder, aspiring innovator and entrepreneur. When I'm not architecting web and mobile apps to improve personal data accessibility, I'm searching for the best food and music experiences and dreaming of superheroes and sunsets.
+								p
+									a(href="http://twitter.com/yakiracb")
+										span.fa-stack.fa-lg
+											i.fa.fa-circle.fa-stack-2x
+											i.fa.fa-twitter.fa-stack-1x.fa-inverse
+									a(href="http://instagram.com/_.shades")
+										span.fa-stack.fa-lg
+											i.fa.fa-circle.fa-stack-2x
+											i.fa.fa-instagram.fa-stack-1x.fa-inverse
+									a(href="http://github.com/yakirac")
+										span.fa-stack.fa-lg
+											i.fa.fa-circle.fa-stack-2x
+											i.fa.fa-github.fa-stack-1x.fa-inverse
+								
+		////Start the footer//
+		include ./_inc/footer.pug
+		include ./_inc/scripts.pug

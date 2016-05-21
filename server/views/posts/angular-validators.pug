@@ -23,3 +23,23 @@ div.container-fluid
 			p angular.merge performs a deep copy of the object as apposed to angular.extend which performs a shallow copy of the object. We will discuss the different functions on angular in a future post.
 			p Now that we have your custom validation in place for an email, we can create more and add them to the $validators or $asycValidators property. Maybe we want to have a unique email validator or put validation on a password. That can all be done by adding them to the appropriate property on NgModelController.
 			p How do you validate form fields? Let us know in the comments below.
+	div.row
+		div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+			div#disqus_thread
+
+		
+	script.		
+		var disqus_config = function () {
+			this.page.url = 'http://refinedjs.io/posts/angular-validators'; // Replace PAGE_URL with your page's canonical URL variable
+			this.page.identifier = 'angular-validators'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		};
+		
+		(function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		
+		s.src = '//refinedjs.disqus.com/embed.js';
+		
+		s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();
+			

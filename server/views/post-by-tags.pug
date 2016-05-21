@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+	//// Start the head //
+	head
+		include ./_inc/head.pug
+	body
+		// Start the navigation //
+		include ./_inc/nav.pug
+		////home page header//
+		header.intro-header
+			div.container-fluid
+				div.row
+					div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+						div.site-heading
+							h1 Refined Js
+							hr.small
+							span.subheading All Post By <code>#{tag}</code>
+		////Start listing of blog entries//
+		div.container-fluid
+			div.row
+				div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+					
+					
+			hr
+		////Start the footer//
+		include ./_inc/footer.pug
+		include ./_inc/scripts.pug

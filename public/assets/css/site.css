@@ -532,3 +532,7 @@ body {
 .thumbnail p.context{
 	max-height: 200px;
 }
+
+#disqus_thread{
+	margin-top: 50px;
+}

@@ -30,7 +30,11 @@ div.container-fluid.post
 			<code data-gist-id="1fb1731c3c9f362d63c1049127210f44" data-gist-show-spinner="true"></code>
 			hr
 			h3 The Refined Way
-			p To clean up the code above and to make more sense of what we are using we will incorporate the <code>BindToController</code> property. 
+			p To clean up the code above and to make more sense of what we are using we will incorporate the <code>BindToController</code> property. The <code>BindToController</code> property can be either a <code>True/False</code> or an <code>object hash</code>. Also, the <code>ControllerAs</code> property must be set in order to use <code>BindToController</code>. With these to properties set, we can not have Angular bind the given properties to the controller rather the <code>$scope</code>.
+			p In our example, we will be using the an <code>object hash</code>, by using the hash, this tells Angular to set up bindings to the controller directly. <strong>**One important thing to note</strong>, If <code>BindToController</code> and <code>$scope</code> are both defined with <code>object hashes</code>, <code>BindToController</code> will override the components <code>$scope</code>.
+			p Below you can see this in action <em>(working example can be found here -> <a rel="_blank" href="http://codepen.io/refinedjs/pen/ONeYJm?editors=1011">Code Pen</a>)</em>.		
+			<code data-gist-id="46a1eefa119c2d550b1c5413f8a2646b" data-gist-show-spinner="true"></code>
+			p As you can see from the code example above that <code>BindToController</code> makes it easier and more elegant option when using <code>Controllers</code> in <code>Directives/Components</code>. This is a fairly basic example; however, it gives good insight into the property as a whole. Please comment any suggestions or better ways to use the <code>BindToController</code> property.  
 	div.row
 		div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
 			div#disqus_thread

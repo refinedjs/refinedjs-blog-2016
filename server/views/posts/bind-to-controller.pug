@@ -20,10 +20,10 @@ header.intro-header.post
 div.container-fluid.post
 	div.row
 		div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
-			p <code>BindToController</code> allows you to bind the components properties directly to controller rather than the <code>isolated $scope</code> of the component. This is a huge win for component development! The controller of the component now has the ability to be decoupled from the component <code>isolated $scope</code>. There is now no reason to have a messy mixing of <code>$scope</code> and the <code>context</code> of the controller. 
+			p <code>BindToController</code> allows you to bind the components properties directly to <code>Controller</code> rather than the <code>isolated $scope</code> of the component. This is a huge win for component development! The <code>Controller</code> of the component now has the ability to be decoupled from the component <code>isolated $scope</code>. There is now no reason to have a messy mixing of <code>$scope</code> and the <code>context</code> of the <code>Controller</code>. 
 			p Before we get into the code, this is how Angular defines the <code>BindToController</code> property:
-			blockquote "<a rel="_blank" href="https://docs.angularjs.org/api/ng/service/$compile">BindToController</a>" - This property is used to bind scope properties directly to the controller. It can be either true or an object hash with the same format as the scope property. Additionally, a controller alias must be set, either by using controllerAs: 'myAlias' or by specifying the alias in the controller definition: controller: 'myCtrl as myAlias'.
-			p Ok, so what exactly does this mean? This means that we can remove the passing and binding of <code>$scope</code> through out our controller/directive. 
+			blockquote "<a rel="_blank" href="https://docs.angularjs.org/api/ng/service/$compile">BindToController</a>" - This property is used to bind scope properties directly to the <code>Controller</code>. It can be either true or an object hash with the same format as the scope property. Additionally, a controller alias must be set, either by using controllerAs: 'myAlias' or by specifying the alias in the controller definition: controller: 'myCtrl as myAlias'.
+			p Ok, so what exactly does this mean? This means that we can remove the passing and binding of <code>$scope</code> through out our <code>controller/directive</code>. 
 			hr
 			h3 The Messy Way
 			p Below is an example of this <em>(working example can be found here -> <a rel="_blank" href="http://codepen.io/refinedjs/pen/dMBLqb/?editors=1011">Code Pen</a>)</em>.

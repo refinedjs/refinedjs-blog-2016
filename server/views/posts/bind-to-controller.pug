@@ -1,0 +1,47 @@
+header.intro-header.post
+	div.container-fluid
+		div.row
+			div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+				div.site-heading
+					h1 Using BindToController - Why this is so damn useful?
+					p.post-meta-details
+						em
+							small <a href="/contributors#josh">Josh Gonzalez</a> | 5.20.2016
+								br
+								i.fa.fa-tags 	
+								a(href="") AngularJS
+								|, 
+								a(href="") Components
+								|, 
+								a(href="") Directives
+								|, 
+								a(href="") Javascript
+								
+div.container-fluid.post
+	div.row
+		div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+			p <code>BindToController</code> allows you to bind the components properties directly to controller rather than the <code>isolated $scope</code> of the component. This is a huge win for component development! The controller of the component now has the ability to be decoupled from the component <code>isolated $scope</code>. There is now no reason to have a messy mixing of <code>$scope</code> and the <code>context</code> of the controller. 
+			p Before we get into the code, this is how Angular defines the <code>BindToController</code> property:
+			blockquote "<a rel="_blank" href="https://docs.angularjs.org/api/ng/service/$compile">BindToController</a>" - This property is used to bind scope properties directly to the controller. It can be either true or an object hash with the same format as the scope property. Additionally, a controller alias must be set, either by using controllerAs: 'myAlias' or by specifying the alias in the controller definition: controller: 'myCtrl as myAlias'.
+			p Ok, so what exactly does this mean? This means that we can remove the passing and binding of <code>$scope</code> through out our controller/directive. 
+			hr
+			h3 The Messy Way
+			p Below is an example of this <em>(working example can be found here -> <a rel="_blank" href="http://codepen.io/refinedjs/pen/dMBLqb/?editors=1011">Code Pen</a>)</em>.
+			<code data-gist-id="1fb1731c3c9f362d63c1049127210f44" data-gist-show-spinner="true"></code>
+			hr
+			h3 The Refined Way
+			p To clean up the code above and to make more sense of what we are using we will incorporate the <code>BindToController</code> property. 
+	div.row
+		div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+			div#disqus_thread
+	script.		
+		var disqus_config = function () {
+			this.page.url = 'http://refinedjs.io/posts/5-20-2016/bind-to-controller';
+			this.page.identifier = 'bind-to-controller';
+		};
+		(function() { // DON'T EDIT BELOW THIS LINE
+		var d = document, s = d.createElement('script');
+		s.src = '//refinedjs.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();

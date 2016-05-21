@@ -19,16 +19,44 @@ html(lang="en")
 		div.container-fluid
 			div.row
 				div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
-					////**************Start Post**************////
+					
+					////**************Start bind-to-controller Post**************////
 					div.post-preview
 						////Start the header//
-						a(href="/posts/angular-validators")
+						a(href="/posts/5-20-2016/bind-to-controller")
+							h2.post-title BindToController - Why this is so damn useful?
+						p.post-meta By 
+								a(href="/contributors#josh") Joshua Gonzalez 
+								|| May 20th, 2016
+						hr
+						h3.post-subtitle <code>BindToController</code> allows you to bind the components properties directly to controller rather than the <code>isolated $scope</code> of the component. This is a huge win for component development! The controller of the component now has the ability to be decoupled...
+						p.post-meta-details
+							i.fa.fa-tags
+							| 
+							a(href="") AngularJS
+							|, 
+							a(href="") Components
+							|, 
+							a(href="") Javascript
+						p.post-meta-details
+							i.fa.fa-comments
+							| 
+							a(href="http://refinedjs.io/posts/5-20-2016/bind-to-controller#disqus_thread") 
+							a.pull-right(href="/posts/5-20-2016/bind-to-controller")
+								span read more...
+					////**************End bind-to-controller Post************//				
+
+
+					////**************Start angular-validators Post**************////
+					div.post-preview
+						////Start the header//
+						a(href="/posts/4-30-2016/angular-validators")
 							h2.post-title Using NgModelController $validators and $asyncValidators to validate form fields
 						p.post-meta By 
 								a(href="/contributors#yakira") Yakira Bristol 
 								|| April 30th, 2016
 						hr
-						h3.post-subtitle The most common way to validate form fields in angular is to look at $valid and $invalid on the fields. But what if that is not enough and you want to create special validation for your fields (i.e. validating an email against a regex or make a call to the server to validate a value)? NgModelController has collection of validators called $validators and $asyncValidators that can be used to create your custom field validations...
+						h3.post-subtitle The most common way to validate form fields in angular is to look at <code>$valid</code> and <code>$invalid</code> on the fields. But what if that is not enough and you want to create special validation for your fields (i.e. validating an email against a regex or make a call to the server to validate a value)? <code>NgModelController</code> has collection of validators called <code>$validators</code> and <code>$asyncValidators</code> that can be used to create your custom field validations...
 						p.post-meta-details
 							i.fa.fa-tags
 							| 
@@ -40,13 +68,17 @@ html(lang="en")
 						p.post-meta-details
 							i.fa.fa-comments
 							| 
-							a(href="http://refinedjs.io/posts/angular-validators#disqus_thread") 
-							a.pull-right(href="/posts/angular-validators")
+							a(href="http://refinedjs.io/posts/4-30-2016/angular-validators#disqus_thread") 
+							a.pull-right(href="/posts/4-30-2016/angular-validators")
 								span read more...
-					////**************End Post************//				
-					ui.pager
-						li.next
-							a(href="") Older Posts &rarr;
+					////**************End angular-validators Post************//				
+					
+
+					//*
+						#ui.pager
+						#	li.next
+						#		a(href="") Older Posts &rarr;
+					//
 			hr
 		////Start the footer//
 		include ./_inc/footer.pug

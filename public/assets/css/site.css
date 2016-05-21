@@ -33,6 +33,9 @@ blockquote {
   color: #808080;
   font-style: italic;
 }
+code{
+	color: #0085a1
+}
 hr.small {
   max-width: 100px;
   margin: 15px auto;
@@ -161,6 +164,15 @@ img.logo {
 }
 .intro-header.post{
 	margin-bottom: 0px;
+}
+
+.intro-header .site-heading p{
+	margin: 0px;
+	color: #808080;
+}
+.intro-header .site-heading a{
+	color: #0085a1;
+	text-decoration: none;
 }
 
 article{
@@ -364,6 +376,10 @@ and (orientation : portrait) {
 	}
 }
 
+.post a{
+	color: #0085a1;
+	text-decoration: none;
+}
 footer {
   padding: 50px 0 65px;
 }

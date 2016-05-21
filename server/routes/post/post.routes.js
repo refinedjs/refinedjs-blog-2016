@@ -19,6 +19,6 @@
 	**-------------------------------------------------------------------------------------
 	*/
 	function setPostRoutes( app ) {
-		app.route( "/posts/:post" ).get( controller.getPost );
+		app.route( "/posts/:date/:post" ).get( controller.getPost );
 	}
 }());

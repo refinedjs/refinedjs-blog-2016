@@ -14,11 +14,24 @@
 //================================================================================//
 	module.exports = {
 		postExists : postExists,
-		compilePost : compilePost
+		compilePost : compilePost,
+		getPageTitle : getPageTitle
 	};
 //================================================================================//
 //=========  public methods  =====================================================//
 //================================================================================//
+	/*
+	** METHOD - getPageTitle
+	** DESC - This will get our page title
+	*/
+	function getPageTitle( post ){
+		var data;
+		data = {
+			"bind-to-controller" : "BindToController - Why this is so damn useful?",
+			"angular-validators" : "Using NgModelController $validators and $asyncValidators to validate form fields"
+		};
+		return data[ post ];
+	}
 	/*
 	**-------------------------------------------------------------------------------------
 	** METHOD NAME - postExists

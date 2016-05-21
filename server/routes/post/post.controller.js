@@ -30,7 +30,7 @@
 		}
 		compiled_include = post_service.compilePost( post )();
 		console.log( compiled_include );		
-		res.status( 200 ).render( "post", { post_template : compiled_include });
+		res.status( 200 ).render( "post", { post_template : compiled_include, page_title : post_service.getPageTitle( post ) });
 	}
 //================================================================================//
 //=========  private api  ========================================================//

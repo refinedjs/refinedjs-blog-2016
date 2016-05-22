@@ -26,7 +26,7 @@
 		var tag;
 		tag = req.params.tag.toUpperCase();
 		console.log( req.params.tag );
-		res.status( 200 ).render( "post-by-tags", { tag : tag });
+		res.status( 200 ).render( "post-by-tags", { tag : tag, page_title : "Tag -> " + tag });
 	}
 //================================================================================//
 //=========  private api  ========================================================//

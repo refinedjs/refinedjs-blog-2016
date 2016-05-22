@@ -3,10 +3,12 @@
 //================================================================================//
 //=========  include modules  ====================================================//
 //================================================================================//
-	var  _, fileExists, base_path, pug;
+	var  _, fileExists, base_path, pug, fs, moment;
 	_ = require( "lodash" );
 	fileExists = require( "file-exists" );
 	pug = require( "pug" );
+	fs = require( "fs" );
+	moment = require( "moment" );
 	base_path = process.env.PWD;
 
 //================================================================================//
@@ -15,11 +17,29 @@
 	module.exports = {
 		postExists : postExists,
 		compilePost : compilePost,
-		getPageTitle : getPageTitle
+		getPageTitle : getPageTitle,
+		getPost : getPost
 	};
 //================================================================================//
 //=========  public methods  =====================================================//
 //================================================================================//
+	/*
+	** METHOD - getPost
+	** DESC - This will get the post
+	*/
+	function getPost( post_id ){
+		var post;
+		post = JSON.parse( fs.readFileSync( base_path + "/data/posts.json", "utf8" ) );		
+		post = ( 
+			_.chain( post.posts )
+				.where( { id : post_id } )
+				.first()
+				.value()
+		);
+		console.log( moment( "5/20/2016" ).format( "x" ) );
+		post.created_date = moment.unix( post.created_date ).utc().format( "M-D-YYYY" );
+		return post;
+	}
 	/*
 	** METHOD - getPageTitle
 	** DESC - This will get our page title

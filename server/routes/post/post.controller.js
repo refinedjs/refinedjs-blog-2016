@@ -3,8 +3,8 @@
 //================================================================================//
 //=========  include modules  ====================================================//
 //================================================================================//
-	var post_service, pug;
-	post_service = require( "./post.service" );
+	var service, pug;
+	service = require( "./post.service" );
 
 //================================================================================//
 //=========  export public api  ==================================================//
@@ -25,12 +25,12 @@
 	function getPost( req, res ){
 		var post, post_template, compiled_include;
 		post = req.params.post;
-		if( ! post_service.postExists( post ) ){
+		if( ! service.postExists( post ) ){
 			res.status( 404 ).send( "The post you are looking for does not exists, try again" );			
-		}
-		compiled_include = post_service.compilePost( post )();
-		console.log( compiled_include );		
-		res.status( 200 ).render( "post", { post_template : compiled_include, page_title : post_service.getPageTitle( post ) });
+		}		
+		compiled_include = service.compilePost( post )();
+		var post = service.getPost( post );
+		res.status( 200 ).render( "post", { post : post } );
 	}
 //================================================================================//
 //=========  private api  ========================================================//

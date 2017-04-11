@@ -1,0 +1,44 @@
+header.intro-header.post
+	div.container-fluid
+		div.row
+			div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+				div.site-heading
+					h1 How Do You Handle Continuous Integration and Deployment?
+					p.post-meta-details
+						em
+							small 
+								<a href="/contributors#yakira">Yakira Bristol</a> | 2.8.2017	
+								br
+								i.fa.fa-tags
+								| 
+								a(href="/tags/angularjs") AngularJS
+								|, 
+								a(href="/tags/continuous-integration") Continuous Integration
+								|, 
+								a(href="/tags/continuous-deployment") Continuous Integration
+								|, 
+								a(href="/tags/javascript") Javascript
+					
+div.container-fluid
+	div.row
+		div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+			p Not too long ago there was an issue with multiple people pushing to the same repo and using just one branch for deploys. This caused backups in builds not being pushed out and delays for other developers wanting to push their code to prod. So what are some ways to handle this?
+			p One way that has been proposed is to make it a rule that if it goes to the master branch, it is ready to be deployed to prod. This seems fair on the surface, but let’s take a deeper look at that. Say you have 3 environments, dev, test and prod. The code has to make its way to dev and test before it can go to prod. You merge to the master branch, it is in your dev environment, but it has to be tested which means a push to the test environment. Okay so you have tested your code in dev and pushed to the test environment. You think you are good to go, but your tester finds that something is not working quite in the way that product expected it to. That puts you in a predicament. You either need to get a fix in asap or roll it back before someone else pushes to the test environment and is ready to deploy their code. Because, if you remember, you have committed to the understanding that anything merged to the master branch is ready to go to prod. If you cannot deploy right away, you will hold everyone else up. 
+			p The problem is, the fix is not going to be quick. On top of that, rolling back your changes turns out to be a whole other hell because the version control you are using does not make it easy and you have not planned for a roll back situation(that is story for another time). So let’s keep that approach as an option and maybe come back to it a bit later. 
+			p Another approach involves a bit more setup. Currently you have 3 environments and one branch that is not really working out well. Consider this, 3 branches, one for each environment and a release branch. The code gets pushed to each branch and each environment. When it is ready for prod, you push to the release branch and send a notification that you are pushing to prod should someone else need to deploy as well. The code is separated out by environment so if there is an issue all you need to do is roll back that branch to the previous version. That rollback is still hell though so all your problems are not solved. You would be rolling back anyone’s code that came after yours which is not optimal. 
+			p What you really need is a version control system that can handle rollbacks smoothly and the ability to push and revert on commits rather than rolling back everything committed. With this in place you may be able to get away with just one branch, although I would caution against that. Reverts could get messy and having a release branch will most definitely help with the headache. 
+			p How do you handle continuous integration and deployment? What tools do you use? What issues have you solved? Let us know in the comments below.
+	div.row
+		div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+			div#disqus_thread
+	script.		
+		var disqus_config = function () {
+			this.page.url = 'http://refinedjs.io/posts/2-8-2017/handling-continuous-integration-deployment';
+			this.page.identifier = 'handling-continuous-integration-deployment';
+		};
+		(function() { 
+			var d = document, s = d.createElement('script');
+			s.src = '//refinedjs.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();

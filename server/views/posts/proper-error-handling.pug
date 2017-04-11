@@ -1,0 +1,42 @@
+header.intro-header.post
+	div.container-fluid
+		div.row
+			div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+				div.site-heading
+					h1 The Importance Proper Error Handling and a Debugging Tool
+					p.post-meta-details
+						em
+							small 
+								<a href="/contributors#yakira">Yakira Bristol</a> | 10.30.2016	
+								br
+								i.fa.fa-tags
+								| 
+								a(href="/tags/angularjs") AngularJS
+								|, 
+								a(href="/tags/coding") Coding
+								|, 
+								a(href="/tags/error-handling") Error Handling
+								|, 
+								a(href="/tags/javascript") Javascript
+					
+div.container-fluid
+	div.row
+		div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+			p I have seen a lot of issues popup on the UI and neither the user nor the developer knows what the error is. Is it an error on the UI because of something I wrote or because something bubbled up from the backend? There are a not of backends that give very vague reasons for errors or they just push up whatever error they get from the db they are using. These errors are often not informative and make pinpointing the actual issue very difficult. I propose two layers of proper error handling. 
+			p Proper error formatting on the backend. Please do not just return database errors. I see a lot of SQL format and constraint errors and such. As a UI developer that is not useful to me. What is causing that? Is it something I am sending down on a save? Is something not being formatted properly once it gets to the backend. I have no idea. The useful thing to do here is to consume the errors and format them in a way that can be properly handled by the UI. i.e. The field ‘job description is limited to 50 characters' is a more easily consumed error. To be clear the UI and backend developers should be in sync in understanding that the user should not be able to enter more than 50 characters. But if this code was being accessed from an API, then this error will be a huge help in understanding the issue with data passed down.
+			p Proper error formatting on the UI for presentation to the user. A lot of times when the UI does not understand the error from the backend, you see ‘There was an error. If the issue persists, please contact support’.  How helpful is that? As for the UI handling errors sent from the backend, you may not like the error being sent back and want to format it in a way that is easier to display to the user. It could be too long or the wording would not make sense to the user. You may also want to add some additional interaction with the user so that they can clearly see what the error is and where they need to go to fix it. i.e . highlighting the field that is problematic and displaying a message on what the issue is and how to fix.
+			p As a developer you must have a debugging tool in your arsenal. A lot of IDEs have great debugging tools. A debugging tool can help where your error handling either fails or is non-existent. It will save you time, money and having to take pain pills to get rid of the headache either from tension or pulling out your hair.
+	div.row
+		div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+			div#disqus_thread
+	script.		
+		var disqus_config = function () {
+			this.page.url = 'http://refinedjs.io/posts/10-30-2016/proper-error-handling';
+			this.page.identifier = 'proper-error-handling';
+		};
+		(function() { 
+			var d = document, s = d.createElement('script');
+			s.src = '//refinedjs.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();

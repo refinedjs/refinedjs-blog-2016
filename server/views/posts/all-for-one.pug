@@ -1,0 +1,42 @@
+header.intro-header.post
+	div.container-fluid
+		div.row
+			div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+				div.site-heading
+					h1 All For One?
+					p.post-meta-details
+						em
+							small 
+								<a href="/contributors#yakira">Yakira Bristol</a> | 11.7.2016	
+								br
+								i.fa.fa-tags
+								| 
+								a(href="/tags/angularjs") AngularJS
+								|, 
+								a(href="/tags/coding") Coding
+								|, 
+								a(href="/tags/version-control") Version Control
+								|, 
+								a(href="/tags/javascript") Javascript
+					
+div.container-fluid
+	div.row
+		div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+			p I have been involved in conversations recently about mono repos and it has brought up a lot of questions. 
+			p What are the advantages? What are the drawbacks? Push to master means it is ready for prod? Why the assumption on one branch when multiple people are committing to the same branch? What if you want to stagger the changes being pushed? How do you deal with the communication of that with the team? How extensive is the testing on each commit?
+			p You break something in one UI project, but the other changes are okay. If you use a mono repo and one branch, you now have to roll back everything. Please do not fall into the naive assumption that no broken code will go out.
+			p You can resolve a lot with separate branches for each environment. Push to each branch and environment as it is ready. Build on the branch. Have to ability to pick, build and deploy on commits. Communicate what is going out and when. You are a team.
+	div.row
+		div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+			div#disqus_thread
+	script.		
+		var disqus_config = function () {
+			this.page.url = 'http://refinedjs.io/posts/11-7-2016/all-for-one';
+			this.page.identifier = 'all-for-one';
+		};
+		(function() { 
+			var d = document, s = d.createElement('script');
+			s.src = '//refinedjs.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();

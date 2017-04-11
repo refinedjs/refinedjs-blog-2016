@@ -1,0 +1,41 @@
+header.intro-header.post
+	div.container-fluid
+		div.row
+			div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+				div.site-heading
+					h1 Do You Write Tests For Your UI?
+					p.post-meta-details
+						em
+							small 
+								<a href="/contributors#yakira">Yakira Bristol</a> | 11.14.2016	
+								br
+								i.fa.fa-tags
+								| 
+								a(href="/tags/angularjs") AngularJS
+								|, 
+								a(href="/tags/coding") Coding
+								|, 
+								a(href="/tags/testing") Testing
+								|, 
+								a(href="/tags/javascript") Javascript
+					
+div.container-fluid
+	div.row
+		div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+			p Functional testing is great. It is really helpful, but in a way, not enough. When you are dealing with a huge product with code changes that impact multiple areas of the product, that brings up a lot of questions. With reusable components, how do you know that the changes did not negatively impact the interaction of one component with another? How do you know that the button to activate the interaction not longer works? 
+			p Well for starters, you should test your code to make sure it works before pushing it out. In the case that you are moving too fast, if you had tests around your UI, you would be able to quickly see that you broke a button or a field being set for saving. The question is, how do you create these tests without making them fragile in that they break every time you change something in your code? There are little things that you can do in your tests to prevent this.
+			p Do not access elements based on classes, those change.
+	div.row
+		div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+			div#disqus_thread
+	script.		
+		var disqus_config = function () {
+			this.page.url = 'http://refinedjs.io/posts/10-30-2016/testing-ui';
+			this.page.identifier = 'testing-ui';
+		};
+		(function() { 
+			var d = document, s = d.createElement('script');
+			s.src = '//refinedjs.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();

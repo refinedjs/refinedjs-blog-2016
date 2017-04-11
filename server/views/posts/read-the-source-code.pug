@@ -1,0 +1,40 @@
+header.intro-header.post
+	div.container-fluid
+		div.row
+			div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+				div.site-heading
+					h1 Read the Source Code
+					p.post-meta-details
+						em
+							small 
+								<a href="/contributors#yakira">Yakira Bristol</a> | 4.11.2017	
+								br
+								i.fa.fa-tags
+								| 
+								a(href="/tags/angularjs") AngularJs
+								|, 
+								a(href="/tags/react") React
+								|, 
+								a(href="/tags/coding") Coding
+								|, 
+								a(href="/tags/javascript") Javascript
+					
+div.container-fluid
+	div.row
+		div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+			p A lot of people use open source libraries without understanding the nuts and bolts. On the surface this may seem fine. You read its description, it says it will do what you need so you give integrating it into your project a shot. It does not work. It said it was going to, but there is something wrong. You did not write it so you cannot adequately debug it. 
+			p This is the part that I love. I actually do it before using a library. Read the source code. Figure out exactly what the function/class is supposed to do. The context in which it is used, the arguments it needs, the calculations, the comments(if there are any). Once you read the source code, if it is written well or even if it is not, you will understand and be able to determine if the library is really what you need.
+	div.row
+		div.col-lg-8.col-lg-offset-2.col-md-10.col-md-offset-1
+			div#disqus_thread
+	script.		
+		var disqus_config = function () {
+			this.page.url = 'http://refinedjs.io/posts/4-11-2017/read-the-source-code';
+			this.page.identifier = 'read-the-source-code';
+		};
+		(function() { 
+			var d = document, s = d.createElement('script');
+			s.src = '//refinedjs.disqus.com/embed.js';
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+		})();

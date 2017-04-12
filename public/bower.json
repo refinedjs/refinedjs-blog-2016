@@ -1,10 +1,10 @@
 {
-  "name": "",
+  "name": "refinedjs",
   "version": "0.0.0",
   "authors": [
-    "Memberclicks"
+    "RefinedJs"
   ],
-  "description": "",
+  "description": "refinedjs",
   "main": "index.html",
   "keywords": [
     "node",
